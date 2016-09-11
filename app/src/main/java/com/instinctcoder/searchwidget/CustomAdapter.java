@@ -35,11 +35,11 @@ public class CustomAdapter extends CursorAdapter {
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
         //If you want to have zebra lines color effect uncomment below code
-        /*if(cursor.getPosition()%2==1) {
+        if(cursor.getPosition()%2==1) {
              view.setBackgroundResource(R.drawable.item_list_backgroundcolor);
         } else {
             view.setBackgroundResource(R.drawable.item_list_backgroundcolor2);
-        }*/
+        }
 
         ViewHolder holder  =   (ViewHolder)    view.getTag();
         holder.txtId.setText(cursor.getString(cursor.getColumnIndex(Student.KEY_ID)));
